@@ -7,7 +7,7 @@ RUN apk add --no-cache \
 ARG APP_UID=1376
 ARG APP_USER="rsync"
 ARG DATA_DIR="/rsync"
-RUN adduser --disabled-password --uid "$APP_UID" --home "$DATA_DIR" --gecos "$APP_USER" --shell /sbin/nologin "$APP_USER"
+RUN adduser --disabled-password --uid "$APP_UID" --home "$DATA_DIR" --gecos "$APP_USER" "$APP_USER"
 VOLUME ["$DATA_DIR"]
 
 #      SSH
