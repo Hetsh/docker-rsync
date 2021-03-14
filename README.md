@@ -1,3 +1,5 @@
+**This Project is still work in progress.**
+
 # RSync
 Simple to set up SSH daemon with RSync client.
 
