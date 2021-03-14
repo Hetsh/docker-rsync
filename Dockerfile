@@ -15,4 +15,4 @@ EXPOSE 22/tcp
 
 USER "$APP_USER"
 WORKDIR "$DATA_DIR"
-ENTRYPOINT ["sshd", "-D"]
+ENTRYPOINT ["/usr/sbin/sshd", "-D", "-e"]
