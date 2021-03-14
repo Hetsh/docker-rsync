@@ -14,7 +14,8 @@ ARG CONF_FILE="/etc/ssh/sshd_config"
 RUN sed -i "s|#HostKey /etc/ssh/ssh_host_rsa_key|HostKey $DATA_DIR/ssh_host_rsa_key|" "$CONF_FILE" && \
     sed -i "s|#HostKey /etc/ssh/ssh_host_ecdsa_key|HostKey $DATA_DIR/ssh_host_ecdsa_key|" "$CONF_FILE" && \
     sed -i "s|#HostKey /etc/ssh/ssh_host_ed25519_key|HostKey $DATA_DIR/ssh_host_ed25519_key|" "$CONF_FILE" && \
-    sed -i "s|AuthorizedKeysFile	.ssh/authorized_keys|AuthorizedKeysFile $DATA_DIR/authorized_keys|" "$CONF_FILE"
+    sed -i "s|AuthorizedKeysFile	.ssh/authorized_keys|AuthorizedKeysFile $DATA_DIR/authorized_keys|" "$CONF_FILE" && \
+    chown -R "$APP_USER":"$APP_USER" "/run"
 VOLUME ["$DATA_DIR"]
 
 #      SSH
