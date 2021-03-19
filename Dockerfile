@@ -1,6 +1,6 @@
 FROM library/alpine:20210212
 RUN apk add --no-cache \
-    openssh=8.5_p1-r0 \
+    openssh=8.5_p1-r1 \
     rsync=3.2.3-r1
 
 # App user
