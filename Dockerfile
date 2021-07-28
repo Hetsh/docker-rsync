@@ -1,7 +1,7 @@
 FROM library/alpine:20210212
 RUN apk add --no-cache \
         openssh=8.6_p1-r2 \
-        rsync=3.2.3-r3
+        rsync=3.2.3-r4
 
 # App user
 ARG APP_UID=1376
