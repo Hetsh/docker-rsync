@@ -1,4 +1,4 @@
-FROM library/alpine:20210212
+FROM library/alpine:20210730
 RUN apk add --no-cache \
         openssh=8.6_p1-r2 \
         rsync=3.2.3-r4
