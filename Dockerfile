@@ -1,4 +1,4 @@
-FROM amd64/alpine:20210804
+FROM amd64/alpine:20220316
 RUN apk add --no-cache \
         openssh=8.8_p1-r4 \
         rsync=3.2.3-r5
