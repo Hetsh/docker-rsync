@@ -1,6 +1,6 @@
 FROM amd64/alpine:20220328
 RUN apk add --no-cache \
-        openssh=9.0_p1-r0 \
+        openssh=9.0_p1-r1 \
         rsync=3.2.4-r0
 
 # App user
